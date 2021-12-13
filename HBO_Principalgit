@@ -1,2 +1,134 @@
 
-aswd
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class HBO_Principal {
+	static  List<Temporada> juegoDeTronos=new ArrayList<>();
+	public static void main(String[] args) {
+		// Declaración de variables
+		
+		
+		
+		// Captura de Datos
+		crearTemporada();
+		crearTemporada();
+		crearTemporada();
+		crearCapitulo(0, "Primer Capitulo");
+		buscarTemporada(1);
+		buscarCapitulo(0, 1);
+		
+		// Cálculos
+		// Presentación de Resultados
+		for (int i=0;i<juegoDeTronos.size();i++) {
+			System.out.println("Temporada "+((Temporada) juegoDeTronos.get(i)).getNumero());
+		}
+		
+	}
+
+
+
+	//Crear, buscar, actualizar y eliminar Temporadas, incluyendo los capítulos que la forman
+	public static void crearTemporada() {
+		int numero=juegoDeTronos.size()+1;
+		Temporada temporada=new Temporada(numero);
+		juegoDeTronos.add(temporada);
+	}
+	
+	public static void crearCapitulo(int numeroTemporada, String nombreCapitulo) {
+		juegoDeTronos.get(numeroTemporada).addCapitulos(nombreCapitulo);
+	}
+	
+	
+	public static void buscarTemporada(int numeroTemporada) {//<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<NO FUNCIONA
+		if(numeroTemporada==juegoDeTronos.get(numeroTemporada).getNumero()) {
+			System.out.println("La temporada " + numeroTemporada + " esta en la lista");
+		}else {
+			System.out.println("La temporada " + numeroTemporada + " no esta en la lista");
+		}
+	}
+	public static void buscarCapitulo(int numeroTemporada, int numeroCapitulo) {
+		System.out.println(juegoDeTronos.get(numeroTemporada).getCapitulos(numeroCapitulo).get(numeroCapitulo).getTitulo());
+	}
+	
+	
+	public static void actualizarTemporada(int temporadaDeLaLista, int nuevoNumero) {
+		((Temporada) juegoDeTronos.get(temporadaDeLaLista)).setNumero(nuevoNumero);//Eclipse sugiere añadir cast a Temporada
+	}
+	
+	/**
+     * Método actualizarCapitulo
+     *
+     * @param temporadaDeLaLista Indica la posicion de la temporada en la lista juegoDeTronos
+     * @param numeroCapitulo Indica el capítulo de la temporada a actualizar
+     * @param nuevoTitulo Indica el título a modificar
+     * @param nuevoDuracion Indica la duracion a modifical
+     * @param nuevoTemporada Indica el numero de la Temporada a modificar
+     */
+	public static void actualizarCapitulo(int temporadaDeLaLista, int numeroCapitulo, String nuevoTitulo, double nuevoDuracion, int nuevoTemporada) {
+		((Temporada) juegoDeTronos.get(temporadaDeLaLista)).getCapitulos(numeroCapitulo).get(numeroCapitulo).setTitulo(nuevoTitulo);
+		((Temporada) juegoDeTronos.get(temporadaDeLaLista)).getCapitulos(numeroCapitulo).get(numeroCapitulo).setDuracion(nuevoDuracion);
+		((Temporada) juegoDeTronos.get(temporadaDeLaLista)).getCapitulos(numeroCapitulo).get(numeroCapitulo).setTemporada(nuevoTemporada);
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	//Escritura y lectura de datos
+	
+//	public class escri_dato {
+//
+//	    void escribir(String filename, datospersonales datos) {
+//	        try {
+//	            FileWriter myWriter = new FileWriter(filename);
+//	            myWriter.write(datos.getApellido()+"\n");
+//	            myWriter.write(datos.getNombre()+"\n");
+//	            myWriter.write(datos.getEdad()+"\n");
+//	            myWriter.write(datos.getCedula()+"\n");
+//	            myWriter.write(datos.getCarrera()+"\n");
+//	            myWriter.close();            
+//	        } catch (IOException ex) {
+//	            System.out.println("An error occurred." + ex.getMessage());
+//	            ex.printStackTrace();
+//	        }
+//	    }
+//
+//	}
+//	
+//	class lectu_datos {
+//
+//	    void leer(String filename) {
+//	        try {
+//	            File myObj = new File(filename);
+//	            Scanner myReader = new Scanner(myObj);
+//	            while (myReader.hasNextLine()) {
+//	                String data = myReader.nextLine();
+//	                System.out.println(data);
+//	            }
+//	            myReader.close();
+//	        } catch (FileNotFoundException e) {
+//	            System.out.println("An error occurred.");
+//	            e.printStackTrace();
+//	        }
+//	    }
+//
+//	}
+
+}
