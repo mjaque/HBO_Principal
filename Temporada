@@ -1,0 +1,43 @@
+package poo;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Temporada {
+	private  Integer numero;
+	private List<Capitulo> capitulos= new ArrayList<>();
+	private Integer contadorTemporada=1;
+	
+	@SuppressWarnings("unchecked")
+	public Temporada(int numero) {
+		this.numero=numero;
+		capitulos=new ArrayList();
+	}
+	
+	//GETTERS & SETTERS
+	public  int getNumero() {
+		return numero;
+	}
+	public void setNumero(int numero) {
+		this.numero = numero;
+	}
+	public List<Capitulo> getCapitulos(int numCap) {
+		return (List<Capitulo>) capitulos.get(numCap);
+	}
+	public void setCapitulos(List<Capitulo> capitulo) {
+		capitulos=capitulo;
+	}
+	
+	
+	//añadir capitulos a la temporada
+	/**
+     * Método addCapitulos
+     *Añade capítulos a la Temporada
+     * @param tituloCapitulo Añade un nombre al capítulo
+     */
+	public void addCapitulos(String tituloCapitulo) {
+		Capitulo capitulo = new Capitulo();
+		capitulo.setTitulo(tituloCapitulo);
+		capitulos.add(capitulo);
+	}
+}
