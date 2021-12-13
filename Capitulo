@@ -19,6 +19,14 @@ public class Capitulo {
 		fechaEstreno=calendario.getTime(); //método de GregorianCalendar, que es la fecha indicada en el constructor Empleado
 	}
 	
+	//Te vendría genial tener, además del constructor "por defecto" (sin parámetros), un constructor que recibiera los parámetros del capítulo.
+	public Capitulo(int temporada, String titulo, double duracion, Date fechaEsteno){
+		this.temporada = temporada;
+		this.titulo = titulo;
+		this.duracion = duracion;
+		this.fechaEstreno = fechaEstreno;
+	}
+	
 	//GETTERS & SETTERS
 	public int getTemporada() {
 		return temporada;
