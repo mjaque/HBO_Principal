@@ -1,0 +1,28 @@
+package poo;
+
+public class Linaje {
+	private String nombre;
+	private String blason;
+	
+	//Constructor
+	public Linaje() {
+		nombre="";
+		blason="";
+	}
+	
+	//GETTERS & SETTERS
+	public String getNombre() {
+		return nombre;
+	}
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+	public String getBlason() {
+		return blason;
+	}
+	public void setBlason(String blason) {
+		this.blason = blason;
+	}
+	
+	
+}
