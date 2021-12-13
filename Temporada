@@ -21,11 +21,17 @@ public class Temporada {
 	public void setNumero(int numero) {
 		this.numero = numero;
 	}
-	public List<Capitulo> getCapitulos(int numCap) {
-		return (List<Capitulo>) capitulos.get(numCap);
+	//Si solo vas a devolver un capítulo el método debería ser
+	public Capitulo getCapitulo(int numCap) {	//nombre en singular
+		return capitulos.get(numCap);
 	}
-	public void setCapitulos(List<Capitulo> capitulo) {
-		capitulos=capitulo;
+	//Si vas a devolver toda la lista de capítulos, debería ser
+	public List<Capitulo> getCapitulos() {	//sin parámetros
+		return this.capitulos;
+	}*/
+	//Más claro con this
+	public void setCapitulos(List<Capitulo> capitulos) {
+		this.capitulos=capitulos;
 	}
 	
 	
@@ -35,9 +41,8 @@ public class Temporada {
      *Añade capítulos a la Temporada
      * @param tituloCapitulo Añade un nombre al capítulo
      */
-	public void addCapitulos(String tituloCapitulo) {
-		Capitulo capitulo = new Capitulo();
-		capitulo.setTitulo(tituloCapitulo);
-		capitulos.add(capitulo);
+     //Tienes que recibir un "Capítulo", no un String
+	public void addCapitulos(Capitulo nuevoCapitulo) {
+		this.capitulos.add(nuevoCapitulo);
 	}
 }
