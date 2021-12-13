@@ -14,7 +14,7 @@ public class HBO_Principal {
 		crearTemporada();
 		crearTemporada();
 		crearTemporada();
-		crearCapitulo(0, "Primer Capitulo");
+		crearCapitulo(0, "Primer Capitulo");	//Al constructor deberías pasarle todos los atributos
 		buscarTemporada(1);
 		buscarCapitulo(0, 1);
 		
