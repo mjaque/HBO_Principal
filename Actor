@@ -1,0 +1,38 @@
+package poo;
+
+
+public class Actor {
+	private String nombre;
+	private int sueldo;
+	private Personaje personaje;
+	
+	//Constructor
+	public Actor() {
+		nombre="";
+		sueldo=0;
+		personaje=new Personaje();
+	}
+	
+	//GETTERS & SETTERS
+	public String getNombre() {
+		return nombre;
+	}
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+	public int getSueldo() {
+		return sueldo;
+	}
+	public void setSueldo(int sueldo) {
+		this.sueldo = sueldo;
+	}
+	public Personaje getPersonaje() {
+		return personaje;
+	}
+	public void setPersonaje(Personaje personaje) {
+		this.personaje = personaje;
+	}
+	
+	
+	
+}
