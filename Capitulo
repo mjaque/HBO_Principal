@@ -1,0 +1,51 @@
+package poo;
+
+import java.util.Date;
+import java.util.GregorianCalendar;
+
+public class Capitulo {
+	private int temporada;
+	private String titulo;
+	private double duracion;
+	private Date fechaEstreno;//(anio, mes-1, dia)
+	
+	
+	//Constructor
+	public Capitulo() {
+		this.temporada = 0;
+		this.titulo="";
+		this.duracion=0.0;
+		GregorianCalendar calendario = new GregorianCalendar(1900, 1, 1); //Almacenamos la fecha indicada en el constructor Empleado
+		fechaEstreno=calendario.getTime(); //método de GregorianCalendar, que es la fecha indicada en el constructor Empleado
+	}
+	
+	//GETTERS & SETTERS
+	public int getTemporada() {
+		return temporada;
+	}
+	public void setTemporada(int temporada) {
+		this.temporada = temporada;
+	}
+	public String getTitulo() {
+		return titulo;
+	}
+	public void setTitulo(String titulo) {
+		this.titulo = titulo;
+	}
+	public double getDuracion() {
+		return duracion;
+	}
+	public void setDuracion(double duracion) {
+		this.duracion = duracion;
+	}
+	public Date getFechaEstreno() {
+		return fechaEstreno;
+	}
+	public void setFechaEstreno(Date fechaEstreno) {
+		this.fechaEstreno = fechaEstreno;
+	}
+	
+	
+}
+
+
